@@ -6,9 +6,11 @@ The first phase of the tournament is known as the "Group Stage" where the 24 tea
 
 ![Screen Shot 2023-12-26 at 9 54 56 AM](https://github.com/yahya-s9/AFCON-Predictor/assets/54677127/fa3c5ee8-e9dc-4055-9b24-9d22db74157f)
 
-After those 3 games, the top 2 teams from each group automatiacally advance to the next stage, the knockout stage.
+After those 3 games, the top 2 teams from each group (12 teams in total) automatiacally advance to the knockout stage.
 
-The knockout stage starts with 16 teams, which consists of the 12 teams that autoamtically adavanced from the group stage, as well as the 4 best 3rd placed teams. (The 6 3rd placed teams are ranked by their points, goal difference, goals scored, etc): 
+The knockout stage need 16 teams, but we have 12 so far. To come up with 4 more teams to advance, the 6 3rd placed teams from the group stage are ranked. The top 4 of those 6 3rd placed teams advance the knockout stage along with the 12 teams from earlier.
+
+Which consists of the 12 teams that autoamtically adavanced from the group stage, as well as the 4 best 3rd placed teams. (The 6 3rd placed teams are ranked by their points, goal difference, goals scored, etc): 
 
 ![Screen Shot 2023-12-26 at 9 56 17 AM](https://github.com/yahya-s9/AFCON-Predictor/assets/54677127/4fd15ff2-b6b6-42f0-8116-c6bfd0436247)
 
