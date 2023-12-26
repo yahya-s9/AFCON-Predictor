@@ -23,3 +23,5 @@ The problem is, if you wanna sit down and predict how the bracket is going to be
 
 So that was my motivation for this web app! The goal is to be able to sort the groups into your predicted ranking (drag and drop) and then sort the 3rd placed teams, then finally populate the round of 16 bracket automatically.
 
+I used React, TypeScript, React DND-Toolkit, etc.
+
