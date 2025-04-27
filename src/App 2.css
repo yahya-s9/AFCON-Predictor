@@ -1,0 +1,269 @@
+:root {
+  --primary-color: #1a5f7a;
+  --secondary-color: #f4a460;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --border-color: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.groups-section {
+  margin-bottom: 3rem;
+}
+
+.groups-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.group-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-container h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 200px;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.team-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 4px;
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+  touch-action: none;
+  border: 1px solid var(--border-color);
+}
+
+.team-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-item.dragging {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  cursor: grabbing;
+  z-index: 1;
+}
+
+.team-item.advancing {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.position {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.team-name {
+  flex: 1;
+}
+
+.third-place-ranking {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.third-place-ranking h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.help-text {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.generate-bracket-btn {
+  display: block;
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.generate-bracket-btn:hover {
+  background-color: #134b61;
+}
+
+.generate-bracket-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.bracket {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bracket h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.match-content {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.match .team {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  background: white;
+}
+
+.match .team.winner {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.match .vs {
+  text-align: center;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.match .select-winner {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.match .select-winner:hover {
+  background-color: #134b61;
+}
+
+.connector {
+  margin-left: 2rem;
+  position: relative;
+}
+
+.connector::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  width: 1rem;
+  height: 2px;
+  background: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .match {
+    flex-direction: column;
+  }
+
+  .connector {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .connector::before {
+    left: 50%;
+    top: -1rem;
+    width: 2px;
+    height: 1rem;
+  }
+}
